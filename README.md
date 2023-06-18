@@ -14,7 +14,6 @@ you're better off forking.
 This requires python3.
 
 Clone the repo, and then install requirements with `pip -r requirements.txt`
-```
 
 # Usage
 
