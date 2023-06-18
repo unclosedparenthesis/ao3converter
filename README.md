@@ -26,5 +26,6 @@ Output directory must already exist.
 * Docx exporter doesn't correctly handle chaptered works.
 * `Work.get_short_fandom_name()` will not work with all fandom names (names
   containing parentheses as part of the fandom name, and probably crossovers too.)
+* Embedded images and workskins almost certainly won't work in the conversion.
 
  
