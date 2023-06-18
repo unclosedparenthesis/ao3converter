@@ -1,11 +1,11 @@
 import unittest
-import converter
+import work
 
 class WorkTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.work = converter.Work('test_work.html')
+        cls.work = work.Work('test_work.html')
 
     def test_get_title(self):
         self.assertEqual(self.__class__.work.get_title(), "Title")
@@ -17,7 +17,7 @@ class WorkTest(unittest.TestCase):
         self.assertEqual('Fandom', self.__class__.work.get_fandom())
 
     def test_get_collection(self):
-        self.assertEqual('Collection', self.__class__.work.get_collections())
+        self.assertEqual('Collection Name', self.__class__.work.get_collections())
 
     def test_get_body_html(self):
         self.assertEqual(self.__class__.work.get_body_html().get_text(strip=True), "A fic!Even more things in the fic!")
