@@ -1,5 +1,10 @@
 """
 Converts AO3-formatted files into DOCX.
+
+Usage:
+    python3 docx_converter.py [input directory] [output directory]
+
+Output directory must already exist.
 """
 
 import sys
@@ -7,6 +12,7 @@ import re
 import html
 import glob
 import os
+import work
 
 from bs4 import BeautifulSoup
 from htmldocx import HtmlToDocx
@@ -61,6 +67,6 @@ if __name__ == '__main__':
     output_dir = sys.argv[2]
 
     for input_file in glob.glob(os.path.join(input_dir, '*.html')):
-        work = Work(input_file)
-        Converter(HtmlToDocx(), work).convert_work().save(os.path.join(output_dir, os.path.basename(input_file).replace('.html', '.docx')))
+        w = work.Work(input_file)
+        Converter(HtmlToDocx(), w).convert_work().save(os.path.join(output_dir, os.path.basename(input_file).replace('.html', '.docx')))
 
