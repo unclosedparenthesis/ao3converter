@@ -1,0 +1,5 @@
+beautifulsoup4==4.12.2
+htmldocx==0.0.6
+lxml==4.9.2
+python-docx==0.8.11
+soupsieve==2.4.1
