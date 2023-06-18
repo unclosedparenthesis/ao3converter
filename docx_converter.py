@@ -51,7 +51,7 @@ class Converter(object):
 
         endnotes = self.work.get_endnotes_html()
         if endnotes:
-            html_str.append("<p /p></p><p>Afterword:</p> {}".format(endnotes))
+            html_str.append("<p/><hr/>{}".format(endnotes))
         html_str.append("</body></html>")
 
         doc = self.parser.parse_html_string(''.join(html_str))
